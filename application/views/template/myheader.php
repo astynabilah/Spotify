@@ -27,7 +27,7 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-item nav-link" href="<?= base_url(); ?>Home">Home</a>
-                    <a class="nav-item nav-link" href="<?= base_url(); ?>">Browse</a>
+                    <a class="nav-item nav-link" href="<?= base_url(); ?>Browse">Browse</a>
                     <a class="nav-item nav-link" href="<?= base_url(); ?>">Your Collection</a>
                     <a class="nav-item nav-link" href="<?= base_url(); ?>Login">Login</a>
 
