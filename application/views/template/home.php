@@ -23,25 +23,25 @@
                         <div class="carousel-inner">
 
                             <div class="carousel-item active">
-                                <div class="row">
+                                <div class="row" style="color : black;">
                                     <div class="col-md-3">
-                                        <a href="#">
-                                            <img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"><center>Top 50 Indonesia</center>
+                                        <a href="<?= base_url(); ?>Top5Indonesia">
+                                            <img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"><center>Pop</center>
                                         </a>
                                     </div>
                                     <div class="col-md-3">
                                         <a href="#">
-                                            <img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"><center>Top 50 Global</center>
+                                            <img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"><center>Jazz</center>
                                         </a>
                                     </div>
                                     <div class="col-md-3">
                                         <a href="#">
-                                            <img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"><center>Viral 50 Global</center>
+                                            <img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"><center>Rock</center>
                                         </a>
                                     </div>
                                     <div class="col-md-3">
                                         <a href="#">
-                                            <img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"><center>Viral 50 Indonesia</center>
+                                            <img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"><center>Electronic</center>
                                         </a>
                                     </div>
                                 </div>
@@ -53,7 +53,7 @@
                                 <div class="row">
                                     <div class="col-md-3">
                                         <a href="#">
-                                            <img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;">
+                                            <img src="Capture.jpg" alt="Image" style="max-width:100%;">
                                         </a>
                                     </div>
                                     <div class="col-md-3">
