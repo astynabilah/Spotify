@@ -22,8 +22,13 @@
                                 <div class="row" style="color : black;">
                                     <div class="col-md-3">
 <<<<<<< HEAD
+<<<<<<< HEAD
                                         <a href="#">
                                             <img src="assets/genre/pop.PNG" alt="Image" style="max-width:100%;"><center>Pop</center>
+=======
+                                        <a href="<?= base_url(); ?>Top5Indonesia">
+                                            <img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"><center>Pop</center>
+>>>>>>> b337d25831bdb0b33cce9b0ad4c7496bcb0d1ccd
 =======
                                         <a href="<?= base_url(); ?>Top5Indonesia">
                                             <img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"><center>Pop</center>
@@ -33,7 +38,11 @@
                                     <div class="col-md-3">
                                         <a href="#">
 <<<<<<< HEAD
+<<<<<<< HEAD
                                             <img src="assets/genre/jazz.PNG" alt="Image" style="max-width:100%;"><center>Jazz</center>
+=======
+                                            <img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"><center>Jazz</center>
+>>>>>>> b337d25831bdb0b33cce9b0ad4c7496bcb0d1ccd
 =======
                                             <img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"><center>Jazz</center>
 >>>>>>> b337d25831bdb0b33cce9b0ad4c7496bcb0d1ccd
@@ -42,7 +51,11 @@
                                     <div class="col-md-3">
                                         <a href="#">
 <<<<<<< HEAD
+<<<<<<< HEAD
                                             <img src="assets/genre/rock.PNG" alt="Image" style="max-width:100%;"><center>Rock</center>
+=======
+                                            <img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"><center>Rock</center>
+>>>>>>> b337d25831bdb0b33cce9b0ad4c7496bcb0d1ccd
 =======
                                             <img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"><center>Rock</center>
 >>>>>>> b337d25831bdb0b33cce9b0ad4c7496bcb0d1ccd
@@ -51,7 +64,11 @@
                                     <div class="col-md-3">
                                         <a href="#">
 <<<<<<< HEAD
+<<<<<<< HEAD
                                             <img src="assets/genre/electronic.PNG" alt="Image" style="max-width:100%;"><center>Electronic</center>
+=======
+                                            <img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"><center>Electronic</center>
+>>>>>>> b337d25831bdb0b33cce9b0ad4c7496bcb0d1ccd
 =======
                                             <img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"><center>Electronic</center>
 >>>>>>> b337d25831bdb0b33cce9b0ad4c7496bcb0d1ccd
