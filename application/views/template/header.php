@@ -17,20 +17,19 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: transparent;">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-left">
         <div class="container">
-            <a class="navbar-brand"  style="color:white;" pxhref="<?= base_url(); ?>Home"><img src="assets/logo.PNG" style="width:30px; height:30px;"> Spotify</a>
+            <a class="navbar-brand" href="<?= base_url(); ?>">Spotify</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link" href="<?= base_url(); ?>Home">Home</a>
-                    <a class="nav-item nav-link" href="<?= base_url(); ?>Browse">Browse</a>
-                    <a class="nav-item nav-link" href="<?= base_url(); ?>YourCollection">Your Collection</a>
-                    <a class="nav-item nav-link" href="<?= base_url(); ?>">Genre & Moods</a>
-                    <a class="nav-item nav-link" href="<?= base_url(); ?>">Charts</a>
-                    <a class="nav-item nav-link" href="<?= base_url(); ?>Login">Login</a>
+                    <a class="nav-item nav-link" href="<?= base_url(); ?>">Home</a>
+                    <a class="nav-item nav-link" href="<?= base_url(); ?>browse">Browse</a>
+                    <a class="nav-item nav-link" href="<?= base_url(); ?>collection">Your Collection</a>
+                    <a class="nav-item nav-link" href="<?= base_url(); ?>collection">Profile</a>
                 </div>
             </div>
         </div>
