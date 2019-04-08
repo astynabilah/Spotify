@@ -9,7 +9,9 @@ class YourCollection extends CI_Controller{
     }
     
     public function getplaylist(){
-
+      foreach $isi in $playlist{
+        
+      }
     }
 
     public function createplaylist(){
