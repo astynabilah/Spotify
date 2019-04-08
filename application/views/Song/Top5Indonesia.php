@@ -11,9 +11,12 @@
                     <tr><?php foreach ($song as $song)  : ?>
                         <td class="text-center"><?= $song['Title']; ?></td>
                         <td class="text-center"><?= $song['Artist']; ?></td>
-                        <td class="text-center" ><?=$song['Song']; ?> <audio controls> $song['Song']
+                        <td class="text-center" ><?=$song['Song']; ?> 
+                            <audio controls> 
+                                <source src="<? php  echo $_GET['Song'];?> "type="audio/mpeg" >
+                                </source>
                          
-                         </audio></td>
+                             </audio></td>
                         
                          
                         </td>
