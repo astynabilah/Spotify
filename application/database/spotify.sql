@@ -1,72 +1,52 @@
--- phpMyAdmin SQL Dump
--- version 4.8.4
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Waktu pembuatan: 06 Apr 2019 pada 12.10
--- Versi server: 10.1.37-MariaDB
--- Versi PHP: 7.1.26
+CREATE TABLE "User" (
+    user_id    INTEGER NOT NULL,
+    username   VARCHAR(100),
+    password   VARCHAR(100),
+    email      VARCHAR(100)
+);
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
-SET time_zone = "+00:00";
+ALTER TABLE "User" ADD CONSTRAINT user_pk PRIMARY KEY ( user_id );
+CREATE TABLE playlist (
+    playlist_name   VARCHAR(100),
+    playlist_id     INTEGER NOT NULL,
+    user_id    INTEGER NOT NULL
+);
 
+ALTER TABLE playlist ADD CONSTRAINT playlist_pk PRIMARY KEY ( playlist_id );
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+ALTER TABLE playlist
+    ADD CONSTRAINT playlist_user_fk FOREIGN KEY ( user_id )
+        REFERENCES "User" ( user_id );
+CREATE TABLE song (
+    song_id   INTEGER NOT NULL,
+    title     VARCHAR(100),
+    genre     VARCHAR(100)
+);
 
---
--- Database: `spotify`
---
+ALTER TABLE song ADD CONSTRAINT song_pk PRIMARY KEY ( song_id );
 
--- --------------------------------------------------------
+CREATE TABLE plays (
+    user_id   INTEGER NOT NULL,
+    song_id   INTEGER NOT NULL
+);
 
---
--- Struktur dari tabel `song`
---
+ALTER TABLE plays
+    ADD CONSTRAINT plays_song_fk FOREIGN KEY ( song_id )
+        REFERENCES song ( song_id );
 
-CREATE TABLE `song` (
-  `Song_ID` int(11) NOT NULL,
-  `Title` varchar(100) NOT NULL,
-  `Artist` varchar(100) NOT NULL,
-  `Song` blob NOT NULL,
-  `Genre` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+ALTER TABLE plays
+    ADD CONSTRAINT plays_user_fk FOREIGN KEY ( user_id )
+        REFERENCES "User" ( user_id );
+        
+CREATE TABLE has (
+    playlist_id   INTEGER NOT NULL,
+    song_id           INTEGER NOT NULL
+);
 
---
--- Dumping data untuk tabel `song`
---
+ALTER TABLE has
+    ADD CONSTRAINT has_playlist_fk FOREIGN KEY ( playlist_id )
+        REFERENCES playlist ( playlist_id );
 
-INSERT INTO `song` (`Song_ID`, `Title`, `Artist`, `Song`, `Genre`) VALUES
-(1, 'Sorry', 'Justien Bieber', '', 'pop\r\n'),
-(2, 'Something just like this', 'The Chainsmoker', '', ''),
-(3, 'One Last Time', 'Ariana Grande', '', ''),
-(4, '7 Rings', 'Ariana Grande', '', '');
-
---
--- Indexes for dumped tables
---
-
---
--- Indeks untuk tabel `song`
---
-ALTER TABLE `song`
-  ADD PRIMARY KEY (`Song_ID`);
-
---
--- AUTO_INCREMENT untuk tabel yang dibuang
---
-
---
--- AUTO_INCREMENT untuk tabel `song`
---
-ALTER TABLE `song`
-  MODIFY `Song_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+ALTER TABLE has
+    ADD CONSTRAINT has_song_fk FOREIGN KEY ( song_id )
+        REFERENCES song ( song_id );

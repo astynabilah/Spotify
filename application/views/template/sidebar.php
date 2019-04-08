@@ -47,10 +47,12 @@ body {
 
 <div class="sidenav">
   <a class="navbar-brand"  style="color:white;" pxhref="<?= base_url(); ?>Home"><img src="assets/logo.PNG" style="width:30px; height:30px;"> Spotify</a>
-  <a href="#home">Home</a>
-  <a href="#search">Search</a>
-  <a href="#library">Library</a>
-  <a href="#login">Login</a>
+
+  <a href="Home">Home</a>
+  <a href="Browse">Browse</a>
+  <a href="YourCollection">Your Collection</a>
+  <a href="Login">Login</a>
+
   <a href="#Signup">signup</a>
 </div>
 
