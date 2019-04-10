@@ -53,7 +53,7 @@ body {
   <a href="YourCollection">Your Collection</a>
   <a href="Login">Login</a>
 
-  <a href="#Signup">signup</a>
+  <a href="signup">signup</a>
 </div>
 
 <div class="main">
