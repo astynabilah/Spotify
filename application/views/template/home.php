@@ -23,7 +23,7 @@
                                     <div class="col-md-3">
 
 
-                                        <a href="<?= base_url(); ?>Top5Indonesia">
+                                        <a href="<?= base_url(); ?>Song">
                                             <img src="assets/genre/pop.PNG" alt="Image" style="max-width:100%; color: white;"><center>Pop</center>
 
                                         </a>
