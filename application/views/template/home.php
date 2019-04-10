@@ -21,50 +21,23 @@
                             <div class="carousel-item active">
                                 <div class="row" style="color : black;">
                                     <div class="col-md-3">
-<<<<<<< HEAD
-                                        <a href="#">
-                                            <img  src="assets/genre/pop.PNG" alt="Image" style="max-width:80%;"><center>Pop</center>
-=======
-
-
                                         <a href="<?= base_url(); ?>Top5Indonesia">
-                                            <img src="assets/genre/pop.PNG" alt="Image" style="max-width:100%; color: white;"><center>Pop</center>
-
->>>>>>> 1eda40e6d6d22f696c878f67bca9440460d53e48
+                                            <img src="assets/genre/pop.PNG" alt="Image" style="max-width:80%; color: white;"><center>Pop</center>
                                         </a>
                                     </div>
                                     <div class="col-md-3">
                                         <a href="#">
-<<<<<<< HEAD
                                             <img src="assets/genre/jazz.PNG" alt="Image" style="max-width:80%;"><center>Jazz</center>
-=======
-
-
-                                            <img src="assets/genre/jazz.PNG" alt="Image" style="max-width:100%;"><center>Jazz</center>
->>>>>>> 1eda40e6d6d22f696c878f67bca9440460d53e48
                                         </a>
                                     </div>
                                     <div class="col-md-3">
                                         <a href="#">
-<<<<<<< HEAD
                                             <img src="assets/genre/rock.PNG" alt="Image" style="max-width:80%;"><center>Rock</center>
-=======
-
-
-                                            <img src="assets/genre/rock.PNG" alt="Image" style="max-width:100%;"><center>Rock</center>
->>>>>>> 1eda40e6d6d22f696c878f67bca9440460d53e48
                                         </a>
                                     </div>
                                     <div class="col-md-3">
                                         <a href="#">
-<<<<<<< HEAD
                                             <img src="assets/genre/electronic.PNG" alt="Image" style="max-width:80%;"><center>Electronic</center>
-=======
-
-                             <img src="assets/genre/electronic.PNG" alt="Image" style="max-width:100%;"><center>Electronic</center>
-
-
->>>>>>> 1eda40e6d6d22f696c878f67bca9440460d53e48
                                         </a>
                                     </div>
                                 </div>
