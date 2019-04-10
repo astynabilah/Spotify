@@ -13,7 +13,7 @@ class Top5Indonesia extends CI_Controller{
 
 	public function index(){
 		$data['judul'] = 'Top5Indonesia';
-		$this->load->view('template/myheader', $data);
+		$this->load->view('template/sidebar', $data);
 		$data['song'] = $this->Top5Indonesia_model->getTop5Indonesia();
 		$this->load->view('Song/Top5Indonesia', $data);
 		
