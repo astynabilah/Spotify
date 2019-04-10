@@ -9,11 +9,11 @@ class YourCollection extends CI_Controller{
     }
     
     public function getplaylist(){
-
     }
 
     public function createplaylist(){
-
+      $this->load->view('template/formPlaylist');
+      //redirect('template/YourCollection',refresh);
     }
 
 
