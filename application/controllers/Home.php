@@ -5,7 +5,6 @@ class Home extends CI_Controller{
 		$data['judul'] = 'Home';
 		$this->load->view('template/sidebar', $data);
 		$this->load->view('template/home', $data);
-
 	}
 
 }
