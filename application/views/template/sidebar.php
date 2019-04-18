@@ -14,7 +14,7 @@ body {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color: #000;
   overflow-x: hidden;
   padding-top: 20px;
 }
@@ -53,7 +53,7 @@ body {
   <a href="YourCollection">Your Collection</a>
   <a href="Login">Login</a>
 
-  <a href="#Signup">signup</a>
+  <a href="signup">signup</a>
 </div>
 
 <div class="main">
