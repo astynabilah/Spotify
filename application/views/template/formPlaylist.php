@@ -10,11 +10,12 @@
         <div class="form-group" style="margin-left:10px;">
             <h1 style="color: white; margin-top: 300px; margin-left:600px">Enter Playlist Name:</h1>
             <div class="col-sm-11">
-            <input type="email" class="form-control" id="playlistname" placeholder="Playlist Name" style="margin-left:40px;height:100px;color:white;background-color:black">
+                <input type="text" class="form-control" id="playlistname" placeholder="Playlist Name" style="margin-left:40px;height:100px;color:white;background-color:black; font-size:400%">
             </div>
         </div>
         <div class="form-group"> 
-            <button type="submit" class="btn btn-default" style="margin-left: 750px;">Submit</button>
+            <button type="submit" class="btn btn-default" style="margin-left: 730px;">Create</button>
+            <button type="submit" class="btn btn-default">Cancel</button>
         </div>
         </form>
     </body>
