@@ -1,4 +1,5 @@
-            <table class="table mt-5" style="margin-left: 225px;">
+           <body style="background-image: linear-gradient(to right, #3D3C4F, #0B0B0E);"> 
+            <table class="table mt-5" style="margin-left: 225px; color : white;">
                 <thead>
                     <tr>
                         <th class="text-center" scope="col">Title</th>
@@ -25,3 +26,4 @@
                     <?php endforeach ?>
                 </tbody>
             </table>
+        </body>
