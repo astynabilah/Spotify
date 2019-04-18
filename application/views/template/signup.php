@@ -37,21 +37,32 @@ body {
     
     <div class="login-form">
     <form action="<?php echo site_url('Login/log_in');?>" method="post">
-        <h2 class="text-center"></h2>       
+        <h2 class="text-center"></h2> 
         <div class="form-group">
-            <input type="text" class="form-control" placeholder="Username" required="required" name="username">
-        </div>
+            <input type="text" class="form-control" placeholder="e-mail" required="required" name="e-mail">
+        </div> 
         <div class="form-group">
             <input type="password" class="form-control" placeholder="Password" required="required" name="password">
         </div>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Name" required="required" name="Name">
+        </div>      
+        <div class="form-group">
+            <input type="date" class="form-control" required="required" name="date">
+        </div>             
+        <div class="form-group">
+              <input type="radio" name="gender" value="male" checked> Male
+              <input type="radio" name="gender" value="female"> Female
+              <input type="radio" name="gender" value="other"> Other
+        </div>
+        
         <div class="form-group">
             <button type="submit" class="btn btn-success btn-block">Log in</button>
         </div>
         <div class="clearfix">
             <label class="pull-left checkbox-inline"><input type="checkbox"> Remember me</label>
             <a href="#" class="pull-right">Forgot Password?</a>
-        </div>    
-        <?php echo $this->session->flashdata('info');?>    
+        </div>        
     </form>
     <p class="text-center"><a href="#">Create an Account</a></p>
     </div>
