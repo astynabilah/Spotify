@@ -12,7 +12,6 @@
                     <tr><?php foreach ($song as $song)  : ?>
                         <td class="text-center"><?= $song['Title']; ?></td>
                         <td class="text-center"><?= $song['Artist']; ?></td>
-                        <td class="text-center" ><?=$song['Song']; ?> </td>
                         <td class="text-center"><?=$song['Genre']; ?> </td>
                         <td>
                             <td>

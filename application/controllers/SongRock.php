@@ -1,8 +1,9 @@
-<?php
+	<?php
 
-class Song extends CI_Controller{
 
-	public function __construct()
+class SongRock extends CI_Controller{
+
+		public function __construct()
 	{
 		parent::__construct();
 		//load model "Mahasiswa_model"
@@ -10,15 +11,13 @@ class Song extends CI_Controller{
 		//load library form validation
 
 	}
-
 	public function index(){
-		$data['judul'] = 'Song';
+
+		$data['judul']= 'Rock';
+		$genre['genre']= 'Genre';
 		$this->load->view('template/sidebar', $data);
-		$data['song'] = $this->Song_model->getSong();
+		$data['song'] = $this->Song_model->getRock('Genre');
 		$this->load->view('Song/ViewSong', $data);
-		//redirect('Song/Pop');	
+		
 	}
-
-
-
 }
