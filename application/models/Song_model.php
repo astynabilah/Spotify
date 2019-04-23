@@ -4,14 +4,28 @@ class Song_model extends CI_model
 {
 	public function getSong()
 	{
-		//use query builder to get data table "mahasiswa"
+		
 		return $this->db->get('song')->result_array();
 
 	}
 
-	public function getPop($genre)
+	public function getPop()
 	{
+		$genre='Pop';
+		$this->db->where('Genre', $genre);
+		return $this->db->get('song')->result_array();
+	}
 
+		public function getJazz()
+	{
+		$genre='Jazz';
+		$this->db->where('Genre', $genre);
+		return $this->db->get('song')->result_array();
+	}
+
+			public function getRock()
+	{
+		$genre='Rock';
 		$this->db->where('Genre', $genre);
 		return $this->db->get('song')->result_array();
 	}

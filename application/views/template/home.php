@@ -19,34 +19,27 @@
                             <div class="carousel-item active">
                                 <div class="row" style="color : black;">
                                     <div class="col-md-3">
-<<<<<<< HEAD
 
 
-                                        <a href="<?= base_url(); ?>Song">
-                                            <img src="assets/genre/pop.PNG" alt="Image" style="max-width:100%; color: white;"><center>Pop</center>
 
-=======
-                                        <a href="<?= base_url(); ?>Top5Indonesia">
-                                            <img src="assets/genre/pop.PNG" alt="Image" style="max-width:80%; color: white;"><center>Pop</center>
->>>>>>> 3911626e2924f19074d69985cc281a583bf223c9
+                                        <a href="<?= base_url(); ?>SongPop">
+                                            <img src="assets/genre/pop.PNG" alt="Image" style="max-width:80%; color: white;"><center style="max-width:80%; color: white;">Pop</center>
+
+                                        </a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <a href="<?= base_url(); ?>SongJazz">
+                                            <img src="assets/genre/jazz.PNG" alt="Image" style="max-width:80%;"><center style="max-width:80%; color: white;">Jazz</center>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <a href="<?= base_url(); ?>SongRock">
+                                            <img src="assets/genre/rock.PNG" alt="Image" style="max-width:80%;"><center style="max-width:80%; color: white;">Rock</center>
                                         </a>
                                     </div>
                                     <div class="col-md-3">
                                         <a href="#">
-                                            <img src="assets/genre/jazz.PNG" alt="Image" style="max-width:80%;"><center>Jazz</center>
-                                            <img src="assets/genre/jazz.PNG" alt="Image" style="max-width:100%;"><center>Jazz</center>
-                                        </a>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <a href="#">
-                                            <img src="assets/genre/rock.PNG" alt="Image" style="max-width:80%;"><center>Rock</center>
-                                            <img src="assets/genre/rock.PNG" alt="Image" style="max-width:100%;"><center>Rock</center>
-                                        </a>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <a href="#">
-                                            <img src="assets/genre/electronic.PNG" alt="Image" style="max-width:80%;"><center>Electronic</center>
-                                            <img src="assets/genre/electronic.PNG" alt="Image" style="max-width:100%;"><center>Electronic</center>
+                                            <img src="assets/genre/electronic.PNG" alt="Image" style="max-width:80%;"><center style="max-width:80%; color: white;">Electronic</center>
                                         </a>
                                     </div>
                                 </div>
