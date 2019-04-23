@@ -1,10 +1,9 @@
 
 <?php
- // write your name and student id here
-class Browse_model extends CI_model
+class BrowseSong_model extends CI_model
 {
 
-public function BrowseSong_model()
+public function getBrowse()
 	{
 		$keyword = $this->input->post('keyword', true);
 		$this->db->like('Title', $keyword);

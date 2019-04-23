@@ -9,14 +9,7 @@ class SignUp extends CI_Controller{
 		$this->load->helper(array('form', 'url'));
 	}
 	public function register(){	
-		/**$this->form_validation->set_rules('name', 'name','required');
-		$this->form_validation->set_rules('username', 'username','required');
-		$this->form_validation->set_rules('password','password','required');
-		$this->form_validation->set_message('check_duplicate_username', 'This username is already exist.');
-		if($this->form_validation->run() == FALSE) {
-			redirect('SignUp');
-		} else {
-		}*/
+
 		$this->load->model('signupmodel');
 		$name = $this->input->post('name');
 		$username = $this->input->post('username');
@@ -31,11 +24,9 @@ class SignUp extends CI_Controller{
 		$query = $this->db->get('user');
 		$count_row = $query->num_rows();
 		if ($count_row == 0) {
-		  //if count row return any row; that means you have already this email address in the database. so you must set false in this sense.
-			$duplicate = FALSE; // here I change TRUE to false.
-		 } else {
-		  // doesn't return any row means database doesn't have this email
-		  $duplicate = TRUE; // And here false to TRUE
+			$duplicate = FALSE; 
+		 } else 
+		  $duplicate = TRUE; 
 		 }
 		
 		if(!$duplicate){

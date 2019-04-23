@@ -7,10 +7,7 @@
 <form class="form-horizontal">
 <fieldset>
 
-<!-- Form Name -->
 
-
-<!-- Button (Double) -->
 <div class="form-group">
   <div class="" style="margin-left:1050px; margin-top: 30px;">
   <a href="YourCollection/createplaylist" class="btn btn-lg btn-success"><span class=""></span>New Playlist</a>

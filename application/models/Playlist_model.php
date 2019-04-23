@@ -2,7 +2,7 @@
 class Playlist_model extends CI_model
 {
 
-public function tambahDataMahasiswa()
+public function tambahPlaylist()
 	{
 		$data = [
 			"nama" => $this->input->post('nama', true),
@@ -11,7 +11,6 @@ public function tambahDataMahasiswa()
 			"jurusan" => $this->input->post('jurusan', true),
 		];
 
-		//use query builder to insert $data to table "mahasiswa"
 		return $this->db->insert('mahasiswa',$data);
 	}
 }

@@ -18,9 +18,7 @@ class YourCollection extends CI_Controller{
       $data = array(
         'playlist_name' => '$playlistname'
       );
-      $this->db->insert('playlist', $data);
-      //$this->db->query('INSERT INTO playlist(playlist_name) VALUES ($playlistname)');
-      //redirect('template/YourCollection',refresh);
+
     }
 
 
