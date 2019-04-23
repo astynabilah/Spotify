@@ -11,6 +11,7 @@
             <h1 style="color: white; margin-top: 100px; margin-left:67px; font-family: Proxima Nova Rg;color: #9B9896">Enter Playlist Name:</h1>
             <div class="col-sm-11">
                 <input type="text" class="form-control" id="playlistname" placeholder="Playlist Name" style="margin-left:40px;height:100px;color:white;background-color:black; font-size:400%; font-family: Berlin Sans FB; border: 0">
+                <input type="text" class="form-control" id="playlistname" name="playlistname"placeholder="Playlist Name" style="margin-left:40px;height:100px;color:white;background-color:black; font-size:400%">
             </div>
         </div>
         <div class="form-group"> 

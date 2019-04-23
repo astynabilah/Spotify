@@ -16,15 +16,12 @@ class Login extends CI_Controller{
 		if ($res['username']!=null){
 			$this->session->set_userdata('username',$res['username']);
 			$this->session->set_userdata('password',$res['password']);
-			$this->session->set_flashdata('flash','sucessfully updated');
-			redirect('Login');
+			$this->session->set_flashdata('flash','sucessfully logged in');
+			redirect('Home');
 		} else {
 			$data['judul']= 'Login';
 			$this->session->set_flashdata('info','Wrong username/password');
 			redirect('Login');
-			$this->load->view('template/sidebar');
-			$this->load->view('template/login',$data);	
-
 		}
 	}
 
