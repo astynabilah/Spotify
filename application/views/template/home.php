@@ -10,7 +10,7 @@
 <title>Music for everyone - Spotify</title>
 
 </head>
-<body style="background-image: linear-gradient(to right, #3a0037, #000000);">
+<body style="background-image: linear-gradient(to right, #180028, #000000);">
 <header style="margin-left: 20% ; font-family: Berlin Sans FB ; font-size: 30pt ; color: White ; font-weight: : Bold; margin-top : 8%">
     Based On Your Favorite Genre
 </header>
