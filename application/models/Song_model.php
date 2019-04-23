@@ -29,4 +29,11 @@ class Song_model extends CI_model
 		$this->db->where('Genre', $genre);
 		return $this->db->get('song')->result_array();
 	}
+		public function BrowseSong()
+	{
+		$keyword = $this->input->post('keyword', true);
+		$this->db->like('Title', $keyword);
+		$this->db->or_like('Artist', $keyword);
+		return $this->db->get('song')->result_array();
+}
 }

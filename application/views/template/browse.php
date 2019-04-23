@@ -15,10 +15,12 @@
                                         <i class="fas fa-search h4 text-body"></i>
                                     </div>
                                     <!--end of col-->
-                                    <form action="" method="post">
-                                    <div class="col" >
-                                        <input name ="keyword" class="form-control form-control-lg form-control-borderless" type="search" placeholder="Start Typing" style ="background-image :linear-gradient(to right, #353535, #353535); border-color: #353535">
-                                         <button class="btn btn-primary" type="submit">Browse </button>
+                                    
+                                    <div class="input-group-append" name="keyword"  href="<?= base_url(); ?>Browse">
+                                        <form action="index.php" method="post" name="keyword">
+                                        <input name ="keyword" class="form-control form-control-lg form-control-borderless" type="text" placeholder="Start Typing" style ="background-image :linear-gradient(to right, #353535, #353535); border-color: #353535">
+                                        <input href="Browse" type="submit" value="Search"/>
+                                         
                                     </div>
                                     <!--end of col-->
                                 </div>
