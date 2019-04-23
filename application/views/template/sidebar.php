@@ -45,10 +45,12 @@ body {
 </head>
 <body>
 
-<div class="sidenav">
-  <a class="navbar-brand"  style="color:white;font-family: Berlin Sans FB" pxhref="<?= base_url(); ?>Home"><img src="assets/logo.PNG" style="width:26px; height:26px;"> Spotify</a>
+<div class="sidenav" style="position: absolute;">
+  <a class="navbar-brand"  style="color:white;font-family: Berlin Sans FB" pxhref="<?= base_url(); ?>Home"><img src="assets/logo.PNG" style="width:26px; height:26px;float: left;"> 
+  Spotify
+  </a>
 
-  <a href="Home" style = "font-family: Candara; font-size : 16pt">Home</a>
+  <a href="Home" style = "font-family: Candara; font-size : 16pt; clear: left;">Home</a>
   <a href="Browse" style = "font-family: Candara; font-size : 16pt">Browse</a>
   <a href="YourCollection" style = "font-family: Candara; font-size : 16pt">Your Collection</a>
   <a href="Login" style = "font-family: Candara; font-size : 16pt">Login</a>

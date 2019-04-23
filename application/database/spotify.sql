@@ -1,52 +1,163 @@
-CREATE TABLE "User" (
-    user_id    INTEGER NOT NULL,
-    username   VARCHAR(100),
-    password   VARCHAR(100),
-    email      VARCHAR(100)
-);
+-- phpMyAdmin SQL Dump
+-- version 4.8.5
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Apr 18, 2019 at 09:40 AM
+-- Server version: 10.1.38-MariaDB
+-- PHP Version: 7.3.3
 
-ALTER TABLE "User" ADD CONSTRAINT user_pk PRIMARY KEY ( user_id );
-CREATE TABLE playlist (
-    playlist_name   VARCHAR(100),
-    playlist_id     INTEGER NOT NULL,
-    user_id    INTEGER NOT NULL
-);
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
 
-ALTER TABLE playlist ADD CONSTRAINT playlist_pk PRIMARY KEY ( playlist_id );
 
-ALTER TABLE playlist
-    ADD CONSTRAINT playlist_user_fk FOREIGN KEY ( user_id )
-        REFERENCES "User" ( user_id );
-CREATE TABLE song (
-    song_id   INTEGER NOT NULL,
-    title     VARCHAR(100),
-    genre     VARCHAR(100)
-);
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
 
-ALTER TABLE song ADD CONSTRAINT song_pk PRIMARY KEY ( song_id );
+--
+-- Database: `spotify`
+--
 
-CREATE TABLE plays (
-    user_id   INTEGER NOT NULL,
-    song_id   INTEGER NOT NULL
-);
+-- --------------------------------------------------------
 
-ALTER TABLE plays
-    ADD CONSTRAINT plays_song_fk FOREIGN KEY ( song_id )
-        REFERENCES song ( song_id );
+--
+-- Table structure for table `play`
+--
 
-ALTER TABLE plays
-    ADD CONSTRAINT plays_user_fk FOREIGN KEY ( user_id )
-        REFERENCES "User" ( user_id );
-        
-CREATE TABLE has (
-    playlist_id   INTEGER NOT NULL,
-    song_id           INTEGER NOT NULL
-);
+CREATE TABLE `play` (
+  `user_id` int(11) NOT NULL,
+  `song_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-ALTER TABLE has
-    ADD CONSTRAINT has_playlist_fk FOREIGN KEY ( playlist_id )
-        REFERENCES playlist ( playlist_id );
+-- --------------------------------------------------------
 
-ALTER TABLE has
-    ADD CONSTRAINT has_song_fk FOREIGN KEY ( song_id )
-        REFERENCES song ( song_id );
+--
+-- Table structure for table `playlist`
+--
+
+CREATE TABLE `playlist` (
+  `playlist_id` int(11) NOT NULL,
+  `playlist_name` varchar(100) NOT NULL,
+  `user_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `playlist_detail`
+--
+
+CREATE TABLE `playlist_detail` (
+  `playlist_id` int(11) NOT NULL,
+  `song_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `song`
+--
+
+CREATE TABLE `song` (
+  `song_id` int(11) NOT NULL,
+  `song_name` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `user_id` int(11) NOT NULL,
+  `username` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  `fullname` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`user_id`, `username`, `password`, `fullname`) VALUES
+(1, 'asty', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'Asty Nabilah'),
+(2, 'astynabilah', '601f1889667efaebb33b8c12572835da3f027f78', 'Asty Nabilah I');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `playlist`
+--
+ALTER TABLE `playlist`
+  ADD PRIMARY KEY (`playlist_id`),
+  ADD KEY `user_id` (`user_id`);
+
+--
+-- Indexes for table `playlist_detail`
+--
+ALTER TABLE `playlist_detail`
+  ADD KEY `playlist_detail_ibfk_1` (`playlist_id`),
+  ADD KEY `song_id` (`song_id`);
+
+--
+-- Indexes for table `song`
+--
+ALTER TABLE `song`
+  ADD PRIMARY KEY (`song_id`);
+
+--
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`user_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `playlist`
+--
+ALTER TABLE `playlist`
+  MODIFY `playlist_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `song`
+--
+ALTER TABLE `song`
+  MODIFY `song_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `playlist`
+--
+ALTER TABLE `playlist`
+  ADD CONSTRAINT `playlist_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `playlist_detail`
+--
+ALTER TABLE `playlist_detail`
+  ADD CONSTRAINT `playlist_detail_ibfk_1` FOREIGN KEY (`playlist_id`) REFERENCES `playlist` (`playlist_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `playlist_detail_ibfk_2` FOREIGN KEY (`song_id`) REFERENCES `song` (`song_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

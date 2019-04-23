@@ -15,8 +15,9 @@
                                         <i class="fas fa-search h4 text-body"></i>
                                     </div>
                                     <!--end of col-->
+                                    <form action="" method="post">
                                     <div class="col" >
-                                        <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Start Typing" style ="background-image :linear-gradient(to right, #353535, #353535); border-color: #353535">
+                                        <input name ="keyword" class="form-control form-control-lg form-control-borderless" type="search" placeholder="Start Typing" style ="background-image :linear-gradient(to right, #353535, #353535); border-color: #353535">
                                     </div>
                                     <!--end of col-->
                                 </div>
