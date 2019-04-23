@@ -10,7 +10,7 @@
         <div class="form-group" style="margin-left:10px;">
             <h1 style="color: white; margin-top: 300px; margin-left:600px">Enter Playlist Name:</h1>
             <div class="col-sm-11">
-                <input type="text" class="form-control" id="playlistname" placeholder="Playlist Name" style="margin-left:40px;height:100px;color:white;background-color:black; font-size:400%">
+                <input type="text" class="form-control" id="playlistname" name="playlistname"placeholder="Playlist Name" style="margin-left:40px;height:100px;color:white;background-color:black; font-size:400%">
             </div>
         </div>
         <div class="form-group"> 
