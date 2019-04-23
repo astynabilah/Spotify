@@ -15,7 +15,8 @@
         </div>
         <div class="form-group"> 
             <button type="submit" class="btn btn-default" style="margin-left: 80px; background-color: black; color: white; border: 0">Create</button>
-            <a type="submit" class="btn btn-default" style="background-color: black; color: white; border: 0">Cancel</a>
+            <script>function goBack() { window.history.back();}</script>
+            <a onclick="goBack()"  type="submit" class="btn btn-default" style="background-color: black; color: white; border: 0">Cancel</a>
         </div>
         </form>
     </body>

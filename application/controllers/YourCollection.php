@@ -12,6 +12,7 @@ class YourCollection extends CI_Controller{
     }
 
     public function createplaylist(){
+      $this->load->helper('url');
       $this->load->view('template/formPlaylist');
       //redirect('template/YourCollection',refresh);
     }
