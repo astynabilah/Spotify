@@ -1,26 +1,24 @@
 <?php
 
 class Browse extends CI_Controller{
+	public function __construct(){
+		parent::__construct();
+		$this->load->model('Song_model');
+		$this->load->model('Browse_model');
 
-	
-
-	public function index(){
-		$data['judul'] = 'Browse';
-		$this->load->view('template/sidebar', $data);
-		$this->load->view('template/Browse', $data);
-		
 	}
 
-		public function BrowseSong()
+		public function index()
 	{
 
 		$data['judul'] = 'Browse';
-		$data['song'] = $this->T->getAllMahasiswa();
+
+		$data['song'] = $this->Song_model->getSong();
 		if ($this->input->post('keyword')) {
-			$data['mahasiswa'] = $this->Mahasiswa_model->cariDataMahasiswa();
+			$data['SongBrowse'] = $this->Browse_model->BrowseSong_model();
 		}
-		$this->load->view('templates/header', $data);
-		$this->load->view('mahasiswa/index', $data);
-		$this->load->view('templates/footer');
+		$this->load->view('template/sidebar', $data);
+		$this->load->view('template/browse', $data);
+		
 	}
 }
