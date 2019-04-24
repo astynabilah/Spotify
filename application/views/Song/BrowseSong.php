@@ -1,34 +1,31 @@
-          
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
+            <body style="background-image: linear-gradient(to right, #3D3C4F, #0B0B0E);"> 
+            <img src="assets/genre/zara.PNG" style="margin-left: 18.5%; margin-top: 30px;clear: right;float: left;position: relative;">
+            
+            <table width="750 " class="table mt-5" style="margin-left: 20px;margin-top: 30px; color : white;float: left;position: relative;">
+                
+               
+                    <tr>
+                        <th class="text-center" scope="col">Title</th>
+                        <th class="text-center" scope="col">Artist</th>
+                        
+                    </tr>
+                <tbody>
+                    <tr style="padding-right: : 100px;"><?php foreach ($browsesong as $browsesong)  : ?>
 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-<body style="background-image: linear-gradient(to right, #111111, #0B0B0E)">;
-<div class="container" style = "border-color: #353535" width = "100%">
-    <br/>
-    <div class="row justify-content-center" width = "100%">
-                        <div class="col-12 col-md-10 col-lg-8" >
-                            <form class="card card-sm" style = "border-color: #353535" width = "100%">
-                                <div class="card-body row no-gutters align-items-center" style ="background-image : linear-gradient(to right, #353535, #353535); border-color: #353535" >
-                                    <div class="col-auto">
-                                        <i class="fas fa-search h4 text-body"></i>
-                                    </div>
-                                    <!--end of col-->
-                                    
-                                    <div class="input-group-append" name="keyword"  href="<?= base_url(); ?>Browse">
-                                        <form action="index.php" method="post" name="keyword">
-                                        <input name ="keyword" class="form-control form-control-lg form-control-borderless" type="text" placeholder="Start Typing" style ="background-image :linear-gradient(to right, #353535, #353535); border-color: #353535">
-                                        <input href="Browse" type="submit" value="Search"/>
-                                         
-                                    </div>
-                                    <!--end of col-->
-                                </div>
-                            </form>
-                        </div>
-                        <!--end of col-->
-                    </div>
-</div>
-</body>
-           
+                        <td class="text-center"><?= $song['Title']; ?></td>
+                        <td class="text-center"><?= $song['Artist']; ?></td>
+                      
+                        <td>
+                            <td>
+                            <audio controls>           
+                                <source src="assets\songfile\<?= $song['Title']; ?>.mp3 "type="audio/mpeg" > 
+                                </source>   
+                             </audio></td>
+                        
+                         
+                        </td>
+                    </tr>
+                    <?php endforeach ?>
+                </tbody>
+            </table>
+        </body>

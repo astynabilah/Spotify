@@ -37,7 +37,7 @@ body {
     
     <div class="login-form">
     <form action="<?php echo site_url('Login/log_in');?>" method="post">
-        <h2 class="text-center"></h2>       
+        <h2 class="text-center"></h2>      
         <div class="form-group">
             <input type="text" class="form-control" placeholder="Username" required="required" name="username">
         </div>

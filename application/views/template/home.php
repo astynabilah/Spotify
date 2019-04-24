@@ -40,7 +40,7 @@
             </a>
         </td>
         <td>
-            <a href="">
+            <a href="SongElectronic">
                 <img src="assets/genre/electronic.PNG" alt="Image" style="max-width:70%;">
                 <center style="text-align: center; font-family: : Berlin Sans FB; color: white; font-style: bold">
                 Electronic
