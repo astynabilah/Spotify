@@ -18,6 +18,10 @@
                                     <form action="" method="post">
                                     <div class="col" >
                                         <input name ="keyword" class="form-control form-control-lg form-control-borderless" type="search" placeholder="Start Typing" style ="background-image :linear-gradient(to right, #353535, #353535); border-color: #353535">
+<<<<<<< HEAD
+=======
+                                         <button class="btn btn-primary" type="submit">Browse </button>
+>>>>>>> 30ee55f7e5cd3561d14c609f960f780cc7471301
                                     </div>
                                     <!--end of col-->
                                 </div>

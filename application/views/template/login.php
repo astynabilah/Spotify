@@ -42,7 +42,7 @@ body {
             <input type="text" class="form-control" placeholder="Username" required="required" name="username">
         </div>
         <div class="form-group">
-            <input type="password" class="form-control" placeholder="Password" required="required" name="username">
+            <input type="password" class="form-control" placeholder="Password" required="required" name="password">
         </div>
         <div class="form-group">
             <button type="submit" class="btn btn-success btn-block">Log in</button>
@@ -50,7 +50,8 @@ body {
         <div class="clearfix">
             <label class="pull-left checkbox-inline"><input type="checkbox"> Remember me</label>
             <a href="#" class="pull-right">Forgot Password?</a>
-        </div>        
+        </div>    
+        <?php echo $this->session->flashdata('info');?>    
     </form>
     <p class="text-center"><a href="SignUp">Create an Account</a></p>
     </div>
