@@ -8,7 +8,6 @@ class SongJazz extends CI_Controller{
 		parent::__construct();
 		$this->load->model('Song_model');
 
-
 	}
 	public function index(){
 

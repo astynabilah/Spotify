@@ -14,11 +14,13 @@ class Browse extends CI_Controller{
 		$data['judul'] = 'Browse';
 		$data['song'] = $this->Song_model->getSong();
 		if ($this->input->post('keyword')) {
-			$data['browsesong'] = $this->Song_model->getBrowse();
+			//$data['song'] = $this->Song_model->getBrowse();
+		$this->load->view('template/sidebar', $data);
+		$dataa['song'] = $this->Song_model->getBrowse();
+	
+
 		}
 		$this->load->view('template/sidebar', $data);
-		$this->load->view('template/browse', $data);
-		$this->load->view('Song/ViewSong', $data);
-		$this->load->view('Song/BrowseSong',$data);		
+
 	}
 }

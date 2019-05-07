@@ -51,7 +51,7 @@ body {
   </a>
 
   <a href="Home" style = "font-family: Candara; font-size : 16pt; clear: left;">Home</a>
-  <a href="Browse" style = "font-family: Candara; font-size : 16pt">Browse</a>
+  <a href="b" style = "font-family: Candara; font-size : 16pt">Browse</a>
   <a href="YourCollection" style = "font-family: Candara; font-size : 16pt">Your Collection</a>
   <a href="Login" style = "font-family: Candara; font-size : 16pt">Login</a>
 
