@@ -10,7 +10,7 @@
                         
                     </tr>
                 <tbody>
-                    <tr style="padding-right: : 100px;"><?php foreach ($browsesong as $browsesong)  : ?>
+                    <tr style="padding-right: : 100px;"><?php foreach ($song as $song)  : ?>
 
                         <td class="text-center"><?= $song['Title']; ?></td>
                         <td class="text-center"><?= $song['Artist']; ?></td>
