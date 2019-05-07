@@ -41,5 +41,6 @@ class Song_model extends CI_model
 		$this->db->like('Title', $keyword);
 		$this->db->or_like('Artist', $keyword);
 		return $this->db->get('Title')->result_array();
+
 }
 }

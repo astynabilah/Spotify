@@ -14,15 +14,12 @@
 
                         <td class="text-center"><?= $song['Title']; ?></td>
                         <td class="text-center"><?= $song['Artist']; ?></td>
-                      
                         <td>
                             <td>
                             <audio controls>           
                                 <source src="assets\songfile\<?= $song['Title']; ?>.mp3 "type="audio/mpeg" > 
                                 </source>   
                              </audio></td>
-                        
-                         
                         </td>
                     </tr>
                     <?php endforeach ?>
