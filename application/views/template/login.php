@@ -33,7 +33,7 @@ body {
 </head>
 <body>
     
-    <p class ="text-center"><img src="assets/logo2.PNG" style="width:60px; height:60px;"><b><font color :black; font size="100"> Spotify</font></b></p>
+    <p class ="text-center"><img src="assets/cat.PNG" style="width:60px; height:60px;"><b><font color :black; font size="100"> Catify </font></b></p>
     
     <div class="login-form">
     <form action="<?php echo site_url('Login/log_in');?>" method="post">

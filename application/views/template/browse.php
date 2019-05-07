@@ -16,18 +16,15 @@
                                     <!--end of col-->
                                     
                                     <div class="input-group-append" name="keyword"  href="<?= base_url(); ?>Browse">
-                                        <form action="SongPop/index" method="post" name="keyword">
+                                        <form action="<?php echo site_url('Browse/index');?>" method="post" name="keyword">
                                         <input name ="keyword" class="form-control form-control-lg form-control-borderless" type="text" placeholder="Start Typing" style ="background-image :linear-gradient(to right, #353535, #353535); border-color: #353535">
-                                            <div class="input-group-append">
-                                       <a href="Browse">Sign Up</a>
-
-
+                                           <div class="input-group-append">
                                             </div>  
                                          
                                     </div>
                                     <!--end of col-->
                                 </div>
-                            </form>
+                                        </form>
                         </div>
                         <!--end of col-->
                     </div>
