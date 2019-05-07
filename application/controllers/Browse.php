@@ -10,20 +10,14 @@ class Browse extends CI_Controller{
 
 		public function index()
 	{
-
-		$data['judul'] = 'Browse';
 		$data['song'] = $this->Song_model->getSong();
+		$keyword    =   $this->input->post('keyword');
 		if ($this->input->post('keyword')) {
-			//$data['song'] = $this->Song_model->getBrowse();
-		$this->load->view('template/sidebar', $data);
-		$dataa['song'] = $this->Song_model->getBrowse();
-	
-
+			$data['song'] = $this->Browse_model->getBrowse('keyword');
 		}
-		$this->load->view('template/sidebar', $data);
-		//$this->load->view('template/browse', $data);
-		//$this->load->view('Song/BrowseSong',$data);
-		
+		$this->load->view('template/sidebar',$data);
+		$this->load->view('template/browse',$data);
+ 
 		
 	}
 }
