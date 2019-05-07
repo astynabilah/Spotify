@@ -9,20 +9,19 @@ class YourCollection extends CI_Controller{
     $this->load->model('yourcollection_model');
   }
     
-    public function getplaylist(){
-    }
+  public function getplaylist(){
+  }
 
-    public function createplaylist(){
-      $this->load->helper('url');
-      $this->load->view('template/formPlaylist');
-      $this->input->post('playlistname');
-      $data = array(
+  public function createplaylist(){
+    $this->load->helper('url');
+    $this->load->view('template/formPlaylist');
+    $playlistname  = $this->input->post('playlistname');
+    $data = array(
         'playlist_name' => $playlistname
-      );
-      //$this->db->insert('playlist', $data);
-      $this->youcollection_model->newplaylist($data);
-      //redirect('template/YourCollection',refresh);
-    }
-
-
+    );
+    //$this->db->insert('playlist', $data);
+    $created = $this->yourcollection_model->newplaylist($data);
+    redirect('YourCollection');
+    //redirect('template/YourCollection',refresh);
+   }
 }

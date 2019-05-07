@@ -6,7 +6,7 @@
         <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     </head>
     <body style="background-image: linear-gradient(to right, #1d0121, #1B0A13)">
-        <form class="form-horizontal" action="/action_page.php" style="margin:center;">
+        <form class="form-horizontal" action=" action="<?php echo site_url('YourCollection/createplaylist');?>"" style="margin:center;" method="POST">
         <div class="form-group" style="margin-left:10px;">
             <h1 style="color: white; margin-top: 100px; margin-left:67px; font-family: Proxima Nova Rg;color: #9B9896">Enter Playlist Name:</h1>
             <div class="col-sm-11">
