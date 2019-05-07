@@ -1,9 +1,12 @@
 <?php
 
-class yourcollection_model
- extends CI_model
-{
+class yourcollection_model extends CI_model{
     public function newplaylist($data){
-        $this->db->query('INSERT INTO playlist VALUES (1,'$data',1);');
+        $sql = $this->db->set($data)->get_compiled_insert('user');
+        if ($sql){
+            return TRUE;
+        } else {
+            return FALSE;
+        }
     }
 }

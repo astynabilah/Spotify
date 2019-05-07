@@ -25,7 +25,7 @@ class SignUp extends CI_Controller{
 		$count_row = $query->num_rows();
 		if ($count_row == 0) {
 			$duplicate = FALSE; 
-		 } else 
+		 } else {
 		  $duplicate = TRUE; 
 		 }
 		
