@@ -11,6 +11,17 @@ class Login extends CI_Controller{
 	public function log_in(){
 		$this->db->where('username',$this->input->post('username'));
 		$this->db->where('password',sha1($this->input->post('password')));
+		$userid = $this->db
+        ->select("user_id")
+        ->where(
+             [
+                'username' => $username,
+                'password' => md5($password)
+             ]
+         )
+        ->get("user")
+        ->row();
+
 		$res = $this->db->get('user')->row_array();
 		if ($res['username']!=null){
 			$this->session->set_userdata('username',$res['username']);
