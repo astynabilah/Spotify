@@ -21,9 +21,6 @@ class Browse extends CI_Controller{
 
 		}
 		$this->load->view('template/sidebar', $data);
-		//$this->load->view('template/browse', $data);
-		//$this->load->view('Song/BrowseSong',$data);
-		
-		
+
 	}
 }
