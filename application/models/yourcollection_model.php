@@ -9,4 +9,10 @@ class yourcollection_model extends CI_model{
             return FALSE;
         }
     }
+    public function getid($uname){
+        $this->db->select('user_id');
+        $this->db->where('username',$uname);
+        $query = $this->db->get('user');
+        return $query;
+    }
 }

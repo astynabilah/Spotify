@@ -16,12 +16,18 @@ class YourCollection extends CI_Controller{
     $this->load->helper('url');
     $this->load->view('template/formPlaylist');
     $playlistname  = $this->input->post('playlistname');
-    $data = array(
-        'playlist_name' => $playlistname
-    );
+    if (isset($username)){
+      $userid = $this->yourcollection_model->getid($username);
+      $data = array(
+        'playlist_name' => $playlistname,
+        'user_id' => $userid
+      );
     //$this->db->insert('playlist', $data);
     $created = $this->yourcollection_model->newplaylist($data);
     redirect('YourCollection');
     //redirect('template/YourCollection',refresh);
+    } else {
+      $this->session->set_flashdata('flash','Please log in to create playlist!');
+    }
    }
 }
